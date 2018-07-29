@@ -1,10 +1,38 @@
-var data =
-  '{"name": "mkyong","age": 30,"address": {"streetAddress": "88 8nd Street","city": "New York"},"phoneNumber": [{"type": "home","number": "111 111-1111"},{"type": "fax","number": "222 222-2222"}]}';
+// data
+dn_2018_offSeason = [
+  {
+    event1: [
+      "June 24th ",
+      "Drafted ",
+      "Michael Porter Jr.  - First Round (14th Overall) "
+    ],
+    event2: [
+      "July 5th",
+      "Signed",
+      "Isaiah Thomas - Free Agent - 1 year deal. "
+    ],
+    event3: []
+  }
+];
 
-var json = JSON.parse(data);
+function template(eachEvent) {
+  return `
+  <div class="event-item">
+    <div class="event-date">${eachEvent.event1[0]} </div>
+    <div class="event-type">${eachEvent.event1[1]} </div>
+    <div class="event-desc">${eachEvent.event1[2]} </div>
+  </div>
+  <div class="event-item">
+    <div class="event-date">${eachEvent.event2[0]} </div>
+    <div class="event-type">${eachEvent.event2[1]} </div>
+    <div class="event-desc">${eachEvent.event2[2]} </div>
+  </div>
+  `;
+}
 
-json["name"]; //mkyong
-json.name; //mkyong
+document.getElementById("app").innerHTML = `
+  ${dn_2018_offSeason.map(template).join(" ")}
+`;
 
 //  functions
 
@@ -52,17 +80,3 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }
-
-// function petTemplate(pet) {
-//   return `
-//     <div>
-//     <p class="event-icon">${pet.type}</p>
-//     <p class="event-date">${pet.year}</p>
-//       <h2 class="event-text">${pet.eventItem}</h2>
-//     </div>
-//   `;
-// }
-
-// document.getElementsById("#season-2018-off").innerHTML = `
-//   ${petsData.map(petTemplate).join("")}
-// `;

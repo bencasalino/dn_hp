@@ -7,10 +7,18 @@
 .event-container {
   background-color: gray;
 }
+.container-fluid .row {
+  margin: 0;
+  padding: 0;
+}
+.event-container .row {
+  margin: 0;
+  padding: 0;
+}
 
 .filterDiv {
   /* float: left; */
-  background-color: #2196f3;
+  /* background-color: #2196f3; */
   color: #ffffff;
   width: 100px;
   /* line-height: 100px; */
@@ -58,13 +66,27 @@
   color: white;
 }
 
-.filterDiv .event-icon {
-  display: inline;
+.filterDiv .row {
+  margin: 0;
+  padding: 0;
 }
-.filterDiv .event-date {
-  display: inline;
+.event-item {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  /* margin: 0;
+  padding: 0; */
 }
 
-.filterDiv .event-text {
-  display: inline;
+.event-item > .event-date {
+  width: 10%;
+  justify-content: flex-start;
+}
+.event-item > .event-type {
+  width: 10%;
+  justify-content: center;
+}
+.event-item > .event-desc {
+  justify-content: flex-end;
+  width: 100%;
 }
