@@ -3,7 +3,7 @@ dn_2018_offSeason = [
   {
     event1: [
       "June 24th ",
-      "Drafted ",
+      "Drafted",
       "Michael Porter Jr.  - First Round (14th Overall) "
     ],
     event2: [
@@ -30,7 +30,7 @@ function template(eachEvent) {
   `;
 }
 
-document.getElementById("app").innerHTML = `
+document.getElementById("dn_2018_off").innerHTML = `
   ${dn_2018_offSeason.map(template).join(" ")}
 `;
 
@@ -80,3 +80,21 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }
+
+// if the event contains DRAFTED add the icon before
+$('*:contains("Drafted")').each(function() {
+  if ($(this).children().length < 1)
+    $(this).prepend('<img id="drafted" src="./assets/draft.svg" />');
+});
+
+// if the event contains DRAFTED add the icon before
+$('*:contains("Signed")').each(function() {
+  if ($(this).children().length < 1)
+    $(this).prepend('<img id="signed" src="./assets/sign.svg" />');
+});
+
+$(document).ready(function() {
+  $("#show-legend").click(function() {
+    $("#legend").toggle("slow");
+  });
+});

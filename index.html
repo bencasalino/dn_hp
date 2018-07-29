@@ -13,6 +13,8 @@
   <!-- Normalize or Reset CSS -->
   <!-- <link rel="stylesheet" href="css/reset.css"> -->
   <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Abel|Archivo+Narrow|Cabin|Questrial" rel="stylesheet">
   <!-- Local CSS  -->
   <link rel="stylesheet" href="css/base.css">
   <title>Hello, world!</title>
@@ -20,7 +22,7 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-md">
     <a class="navbar-brand" href="#">DN HP</a>
     <div class="navbar-toggler" type="div" data-toggle="collapse" data-target="#navbar-toggler" aria-controls="navbar-toggler"
       aria-expanded="false" aria-label="Toggle navigation">
@@ -29,7 +31,7 @@
     <div class="collapse navbar-collapse" id="navbar-toggler">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home
+          <a class="nav-link" id="show-legend" href="#">About
             <span class="sr-only">(current)</span>
           </a>
         </li>
@@ -37,41 +39,40 @@
     </div>
   </nav>
   <!-- End Header -->
-  <div class="container-fluid">
+  <div>
+    <div id="legend">
+      <p>about the site</p>
+    </div>
+  </div>
+  </div>
+  <div id="top-start" class="container-fluid">
     <div class="row">
       <div class=" container-fluid col-xs-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 year-container">
         <div class="container-fluid" id="myBtnContainer">
-          <div class="btn active" onclick="filterSelection('all')"> SHOW ALL SEASON</div>
-          <div class="btn" onclick="filterSelection('season-2017-off')"> OFF-SEASON</div>
-          <div class="btn" onclick="filterSelection('season-2017-q1')"> Q1</div>
-          <div class="btn" onclick="filterSelection('season-2017-q2')"> Q2</div>
-          <div class="btn" onclick="filterSelection('season-2017-q3')"> Q3</div>
-          <div class="btn" onclick="filterSelection('season-2017-pl')"> PLAYOFFS</div>
-          <div class="btn" onclick="filterSelection('season-2018-off')"> OFF-SEASON</div>
-          <div class="btn" onclick="filterSelection('season-2018-q1')"> Q1</div>
-          <div class="btn" onclick="filterSelection('season-2018-q2')"> Q2</div>
-          <div class="btn" onclick="filterSelection('season-2018-q3')"> Q3</div>
-          <div class="btn" onclick="filterSelection('season-2018-pl')"> PLAYOFFS</div>
+          <div class="btn all-season active" onclick="filterSelection('all')"> SHOW ALL SEASONS</div>
+          <div class="btn" onclick="filterSelection('season-2018-q1')"> SEASON START
+            <i class="fas fa-arrow-right"></i> END 2018 </div>
+          <div class="btn new-season" onclick="filterSelection('season-2018-off')"> 2018 OFF-SEASON</div>
+          <div class="btn" onclick="filterSelection('season-2017-pl')"> 2018 PLAYOFFS</div>
+          <div class="btn" onclick="filterSelection('season-2017-q2')"> 2018
+            <i class="fas fa-arrow-right"></i> END REGULAR SEASON</div>
+          <div class="btn" onclick="filterSelection('season-2017-q1')"> SEASON START
+            <i class="fas fa-arrow-right"></i> END 2017</div>
+          <div class="btn new-season" onclick="filterSelection('season-2017-off')"> 2017 OFF-SEASON</div>
         </div>
       </div>
       <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 event-container">
         <div class="row">
-          <!-- 2017 -->
-          <div class="filterDiv season-2017-off">
-            <div class="event-item">
-              <div class="event-icon">
-
-              </div>
-              <div class="event-date">June 24th</div>
-              <div class="event-text">Tyler Lydon </div>
-            </div>
+          <!-- 2018 -->
+          <div class="filterDiv season-2018-off" id="dn_2018_off">
+            <!-- 2018 off season -->
           </div>
           <div class="filterDiv season-2017-q1">
           </div>
           <div class="filterDiv season-2017-q2">17 q2</div>
           <div class="filterDiv season-2017-q3">17 q3</div>
           <div class="filterDiv season-2017-pl">17 pl</div>
-          <!-- 2018 -->
+          <!-- 2017 -->
           <div class="filterDiv season-2018-off" id="app">
           </div>
           <div class="filterDiv season-2018-q1" id="appTwo">18 q1</div>
