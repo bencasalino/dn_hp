@@ -5,6 +5,7 @@ font-family: "Abel", sans-serif;
 font-family: "Cabin", sans-serif; */
 
 /* PALLET
+https://teamcolorcodes.com/denver-nuggets-color-codes/
 GOLD
   #fec524
 
@@ -39,9 +40,10 @@ nav {
 /* SIDEBAR */
 .year-container {
   background-color: #fec524;
-  max-height: 400px;
-  overflow: scroll;
+  /* height: 100%; */
+  /* overflow: scroll; */
   font-family: "Cabin", sans-serif;
+  /* border-right: 4px solid #8b2131; */
 }
 
 .all-season {
@@ -53,14 +55,13 @@ nav {
 
 /* MAIN */
 #top-start {
-  border-top: 10px solid #418fde;
+  /* border-top: 10px solid #418fde; */
 }
 .event-container {
   background-color: #1d428a;
-  /* 1D428A */
-  /* font-family: "Questrial", sans-serif; */
+  font-size: 16px;
   font-family: "Cabin", sans-serif;
-  font-weight: bold;
+  /* height: 100%; */
 }
 .container-fluid .row {
   margin: 0;
@@ -72,13 +73,9 @@ nav {
 }
 
 .filterDiv {
-  /* float: left; */
-  /* background-color: #2196f3; */
   color: #ffffff;
   width: 100px;
-  /* line-height: 100px; */
   text-align: left;
-  /* margin: 2px; */
   display: none;
 }
 
@@ -87,10 +84,6 @@ nav {
   width: 100%;
 }
 
-/* .container {
-  margin-top: 20px;
-  overflow: hidden;
-} */
 .container-fluid {
   padding: 0;
   margin: 0;
@@ -101,7 +94,6 @@ nav {
 .container-fluid #myBtnContainer {
   margin: 0;
   padding: 0;
-  /* max-height: 200px; */
 }
 .btn {
   text-align: left;
@@ -129,29 +121,41 @@ nav {
   display: flex;
   flex-direction: row;
   width: 100%;
-  /* margin: 0;
-  padding: 0; */
+  padding: 5px 0;
 }
 
 .event-item > .event-date {
   width: 10%;
   justify-content: flex-start;
+  color: lightgrey;
 }
 .event-item > .event-type {
   width: 10%;
-  justify-content: center;
+  font-size: 12px;
+  /* margin-left: 10px; */
+  /* justify-content: center; */
 }
 .event-item > .event-desc {
-  justify-content: flex-end;
-  width: 100%;
+  /* justify-content: center; */
+  /* width: 100%; */
 }
 
-#drafted {
+.event-item > .event-link {
+  /* justify-content: flex-end; */
+  width: 10%;
+  padding-left: 10px;
+  font-size: 12px;
+}
+
+#icon {
   height: 20px;
   width: 20px;
 }
 
-#signed {
-  height: 20px;
-  width: 20px;
+/* IF events are EMPTY display none */
+.event-item:empty {
+  display: none;
+}
+.event-link > [href=""] {
+  display: none;
 }
